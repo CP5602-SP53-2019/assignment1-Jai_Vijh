@@ -1,7 +1,8 @@
+import sys
 import random
 import time
 import matplotlib.pyplot as plt
-
+sys.setrecursionlimit(99999999)
 def rNGenerator(lowerLimit, upperLimit, numberOfValues, noDuplicates):
     result = [random.randrange(lowerLimit,upperLimit) for i in range(0,numberOfValues)]
     result = list(set(result)) if noDuplicates else result
